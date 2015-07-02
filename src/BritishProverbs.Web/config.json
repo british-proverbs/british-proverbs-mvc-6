@@ -4,7 +4,7 @@
     },
 
     "Data": {
-        "IdentityConnection": {
+        "DbConnection": {
             "Connectionstring": "Server=.\\SQL12;Database=BritishProverbs;Trusted_Connection=True;MultipleActiveResultSets=true"
         }
     }

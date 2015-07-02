@@ -8,7 +8,7 @@ using Microsoft.Framework.OptionsModel;
 
 namespace BritishProverbs.Domain
 {
-    public class BritishProverbsContext
+    public class BritishProverbsContext : IBritishProverbsContext
     {
         private readonly string _connectionString;
 
@@ -38,7 +38,7 @@ namespace BritishProverbs.Domain
             }
         }
 
-        private async Task RecordVisit(string ipAddress)
+        public async Task RecordVisitAsync(string ipAddress)
         {
             const string insertStatement = "INSERT INTO Visits(IpAddress, CreatedOn) VALUES(@IpAddress, @CreatedOn)";
 

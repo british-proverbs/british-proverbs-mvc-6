@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Builder;
+﻿using BritishProverbs.Domain;
+using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Framework.Configuration;
@@ -23,6 +24,8 @@ namespace BritishProverbs.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<AppSettings>(_configuration.GetConfigurationSection("AppSettings"));
+            services.Configure<DomainSettings>(_configuration.GetConfigurationSection("Data:DbConnection"));
+            services.AddScoped<IBritishProverbsContext, BritishProverbsContext>();
             services.AddMvc();
         }
 
