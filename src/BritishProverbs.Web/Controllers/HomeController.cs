@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BritishProverbs.Web.Models;
 using Microsoft.AspNet.Mvc;
 
 namespace BritishProverbs.Web.Controllers
@@ -10,21 +7,7 @@ namespace BritishProverbs.Web.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(new ProverbViewModel());
         }
 
         public IActionResult Error()
