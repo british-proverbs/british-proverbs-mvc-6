@@ -1,5 +1,11 @@
 {
-  "AppSettings": {
-    "SiteTitle": "BritishProverbs.Web"
-  }
+    "AppSettings": {
+        "SiteTitle": "BritishProverbs.Web"
+    },
+
+    "Data": {
+        "IdentityConnection": {
+            "Connectionstring": "Server=.\\SQL12;Database=BritishProverbs;Trusted_Connection=True;MultipleActiveResultSets=true"
+        }
+    }
 }

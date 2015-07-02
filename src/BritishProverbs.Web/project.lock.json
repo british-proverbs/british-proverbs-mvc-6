@@ -2776,6 +2776,61 @@
           "lib/DNXCore50/System.Console.dll": {}
         }
       },
+      "System.Data.Common/4.0.0-beta-23019": {
+        "dependencies": {
+          "System.Runtime": "4.0.0-beta-23019",
+          "System.Threading.Tasks": "4.0.0-beta-23019",
+          "System.IO": "4.0.0-beta-23019",
+          "System.Resources.ResourceManager": "4.0.0-beta-23019",
+          "System.Text.RegularExpressions": "4.0.0-beta-23019",
+          "System.Collections.NonGeneric": "4.0.0-beta-23019",
+          "System.Collections": "4.0.0-beta-23019",
+          "System.Runtime.Extensions": "4.0.0-beta-23019",
+          "System.Globalization": "4.0.0-beta-23019"
+        },
+        "compile": {
+          "ref/dotnet/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Data.Common.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.0.0-beta-23019": {
+        "dependencies": {
+          "System.Runtime": "4.0.20-beta-23019",
+          "System.Runtime.InteropServices": "4.0.20-beta-23019",
+          "System.Resources.ResourceManager": "4.0.0-beta-23019",
+          "System.Collections.NonGeneric": "4.0.0-beta-23019",
+          "System.Data.Common": "4.0.0-beta-23019",
+          "System.Xml.ReaderWriter": "4.0.0-beta-23019",
+          "System.Collections.Concurrent": "4.0.0-beta-23019",
+          "System.Threading.Tasks": "4.0.0-beta-23019",
+          "System.Collections": "4.0.0-beta-23019",
+          "System.Threading.Timer": "4.0.0-beta-23019",
+          "System.Threading.ThreadPool": "4.0.0-beta-23019",
+          "System.Security.Principal.Windows": "4.0.0-beta-23019",
+          "System.Runtime.Handles": "4.0.0-beta-23019",
+          "System.Text.Encoding.CodePages": "4.0.0-beta-23019",
+          "System.Threading.Thread": "4.0.0-beta-23019",
+          "System.Reflection": "4.0.0-beta-23019",
+          "System.Linq": "4.0.0-beta-23019",
+          "System.Reflection.TypeExtensions": "4.0.0-beta-23019",
+          "Microsoft.Win32.Primitives": "4.0.0-beta-23019",
+          "System.IO": "4.0.10-beta-23019",
+          "System.Text.Encoding": "4.0.10-beta-23019",
+          "System.Globalization": "4.0.10-beta-23019",
+          "System.Runtime.Extensions": "4.0.10-beta-23019",
+          "System.Threading": "4.0.10-beta-23019",
+          "System.Text.RegularExpressions": "4.0.10-beta-23019",
+          "System.Diagnostics.Debug": "4.0.10-beta-23019"
+        },
+        "compile": {
+          "ref/dotnet/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/DNXCore50/System.Data.SqlClient.dll": {}
+        }
+      },
       "System.Diagnostics.Contracts/4.0.0-beta-23019": {
         "dependencies": {
           "System.Runtime": "4.0.0-beta-23019"
@@ -3521,6 +3576,27 @@
         },
         "runtime": {
           "lib/DNXCore50/System.Text.Encoding.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.0.0-beta-23019": {
+        "dependencies": {
+          "System.Runtime": "4.0.20-beta-23019",
+          "System.Text.Encoding": "4.0.10-beta-23019",
+          "System.Runtime.InteropServices": "4.0.20-beta-23019",
+          "System.Resources.ResourceManager": "4.0.0-beta-23019",
+          "System.Runtime.Handles": "4.0.0-beta-23019",
+          "System.IO": "4.0.10-beta-23019",
+          "System.Collections": "4.0.10-beta-23019",
+          "System.Threading": "4.0.10-beta-23019",
+          "System.Reflection": "4.0.10-beta-23019",
+          "System.Globalization": "4.0.10-beta-23019",
+          "System.Runtime.Extensions": "4.0.10-beta-23019"
+        },
+        "compile": {
+          "ref/dotnet/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Encoding.Extensions/4.0.10-beta-23019": {
@@ -4947,6 +5023,31 @@
         "ref/net46/System.Console.dll"
       ]
     },
+    "System.Data.Common/4.0.0-beta-23019": {
+      "sha512": "1o8nnn6VSx1GAEfUAMIOreWbXHPPcVjvWQp4swCDBX70KM5ouv/dzmEUR//uQyVtaLOlypNFhHs12e/1sswDlA==",
+      "files": [
+        "System.Data.Common.4.0.0-beta-23019.nupkg",
+        "System.Data.Common.4.0.0-beta-23019.nupkg.sha512",
+        "System.Data.Common.nuspec",
+        "lib/dotnet/System.Data.Common.dll",
+        "lib/net46/System.Data.Common.dll",
+        "ref/dotnet/System.Data.Common.dll",
+        "ref/net46/System.Data.Common.dll"
+      ]
+    },
+    "System.Data.SqlClient/4.0.0-beta-23019": {
+      "sha512": "8NgjVIsR3165uFAu+tPlpZ8uoL14RVLV7o+YZUIBQbiKVZ+3Y8wMd+HiBMo30rbkFsOYabkCgXn6Jc26RbAIvQ==",
+      "files": [
+        "runtime.json",
+        "System.Data.SqlClient.4.0.0-beta-23019.nupkg",
+        "System.Data.SqlClient.4.0.0-beta-23019.nupkg.sha512",
+        "System.Data.SqlClient.nuspec",
+        "lib/DNXCore50/System.Data.SqlClient.dll",
+        "lib/net46/System.Data.SqlClient.dll",
+        "ref/dotnet/System.Data.SqlClient.dll",
+        "ref/net46/System.Data.SqlClient.dll"
+      ]
+    },
     "System.Diagnostics.Contracts/4.0.0-beta-23019": {
       "sha512": "wi3eWkfN0kZYCHgIaOqRDfJoyl8P8oQLcxZ47ElLDTtOEW0TfGl0wVeqllMg7nMMzR7C1ordTWycpV34yQ7g4Q==",
       "files": [
@@ -5621,6 +5722,16 @@
         "ref/dotnet/System.Text.Encoding.dll",
         "ref/net46/_._",
         "runtimes/win8-aot/lib/netcore50/System.Text.Encoding.dll"
+      ]
+    },
+    "System.Text.Encoding.CodePages/4.0.0-beta-23019": {
+      "sha512": "g0lWYGITectCuzFwzH1fuWHAHGmHQO8B3FrU1gUvR8DYAgxxRwbQa1jg2XJs+wzeo2KWwuvPXwXif5v4JpLXkw==",
+      "files": [
+        "System.Text.Encoding.CodePages.4.0.0-beta-23019.nupkg",
+        "System.Text.Encoding.CodePages.4.0.0-beta-23019.nupkg.sha512",
+        "System.Text.Encoding.CodePages.nuspec",
+        "lib/dotnet/System.Text.Encoding.CodePages.dll",
+        "ref/dotnet/System.Text.Encoding.CodePages.dll"
       ]
     },
     "System.Text.Encoding.Extensions/4.0.10-beta-23019": {
