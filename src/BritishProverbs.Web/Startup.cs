@@ -1,4 +1,5 @@
 ﻿using BritishProverbs.Domain;
+using BritishProverbs.Web.Middlewares;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
@@ -43,6 +44,8 @@ namespace BritishProverbs.Web
             }
 
             app.UseStaticFiles();
+
+            app.UseMiddleware<VisitRecorderMiddleware>();
 
             app.UseMvc(routes =>
             {
