@@ -38,6 +38,31 @@ namespace BritishProverbs.Domain
             }
         }
 
+        public async Task<int> GetVisitsCountAsync()
+        {
+            const string selectStatement = "SELECT COUNT(Id) AS[Count] FROM dbo.Visits;";
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = selectStatement;
+                    cmd.CommandType = CommandType.Text;
+
+                    await conn.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        reader.Read();
+
+                        return int.Parse(reader["Count"].ToString());
+                    }
+                }
+            }
+
+            throw new NotImplementedException();
+        }
+
         public async Task RecordVisitAsync(string ipAddress)
         {
             const string insertStatement = "INSERT INTO Visits(IpAddress, CreatedOn) VALUES(@IpAddress, @CreatedOn)";

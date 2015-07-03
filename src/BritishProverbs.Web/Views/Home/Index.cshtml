@@ -3,6 +3,25 @@
     ViewBag.Title = "Home Page";
 }
 
-<div>
+<div class="proverb-content">
     @Model.Content
 </div>
+
+@section scripts {
+
+    <script>
+        (function () {
+
+            window.setInterval(function () {
+
+                fetch('/visits').then(function (response) {
+                    response.json().then(function (data) {
+                        console.log(data);
+                    });
+                });
+
+            }, 1000);
+
+        }());
+    </script>
+}

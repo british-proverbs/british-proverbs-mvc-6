@@ -6,6 +6,7 @@ namespace BritishProverbs.Domain
     public interface IBritishProverbsContext
     {
         Task<ProverbModel> GetRandomAsync();
+        Task<int> GetVisitsCountAsync();
         Task RecordVisitAsync(string ipAddress);
     }
 }
