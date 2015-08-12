@@ -5,7 +5,7 @@
 
     "Data": {
         "DbConnection": {
-            "Connectionstring": "Server=.\\SQL12;Database=BritishProverbs;Trusted_Connection=True;MultipleActiveResultSets=true"
+            "Connectionstring": "Server=.\\SQLEXPRESS;Database=BritishProverbs;Trusted_Connection=True;MultipleActiveResultSets=true"
         }
     }
 }

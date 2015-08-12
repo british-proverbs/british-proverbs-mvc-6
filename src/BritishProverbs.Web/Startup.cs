@@ -1,7 +1,6 @@
 ﻿using BritishProverbs.Domain;
 using BritishProverbs.Web.Middlewares;
 using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
@@ -36,7 +35,7 @@ namespace BritishProverbs.Web
 
             if (env.IsEnvironment("Development"))
             {
-                app.UseErrorPage(ErrorPageOptions.ShowAll);
+                app.UseErrorPage();
             }
             else
             {
