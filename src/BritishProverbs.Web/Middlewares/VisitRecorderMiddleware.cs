@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using BritishProverbs.Domain;
-using BritishProverbs.Web.Utils;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.Logging;
@@ -23,7 +22,7 @@ namespace BritishProverbs.Web.Middlewares
         {
             try
             {
-                await proverbsContext.RecordVisitAsync(httpContext.GetClientIPAddress());
+                await proverbsContext.RecordVisitAsync(httpContext.Connection.RemoteIpAddress?.ToString());
             }
             catch(Exception ex)
             {
