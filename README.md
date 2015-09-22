@@ -12,7 +12,7 @@ New-DatabaseRelease -Source "$($pwd.tostring())\db" `
 	Use-DatabaseRelease -DeployTo (New-DatabaseConnection -Server .\SQLEXPRESS -Database BritishProverbs)
 ```
 
-### Change Connection String
+### Change the Connection String
 By default, the application looks for SQLEXPRESS instance and a database named **BritishProverbs**. You can change this by setting up an environment variable named as *BritishProverbs-Data:DbConnection:Connectionstring* as below:
 
 ```powershell
