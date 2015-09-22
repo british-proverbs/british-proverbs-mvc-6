@@ -1,11 +1,11 @@
 ﻿using BritishProverbs.Domain;
-using BritishProverbs.Web.Middlewares;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
-using Microsoft.Framework.Runtime;
+using BritishProverbs.Web.Middlewares;
 
 namespace BritishProverbs.Web
 {
@@ -17,14 +17,14 @@ namespace BritishProverbs.Web
         {
             _configuration = new ConfigurationBuilder(appEnv.ApplicationBasePath)
                 .AddJsonFile("config.json")
-                .AddEnvironmentVariables()
+                .AddEnvironmentVariables("BritishProverbs-")
                 .Build();
         }
 
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.Configure<AppSettings>(_configuration.GetConfigurationSection("AppSettings"));
-            services.Configure<DomainSettings>(_configuration.GetConfigurationSection("Data:DbConnection"));
+        {          
+            services.Configure<AppSettings>(_configuration.GetSection("AppSettings"));
+            services.Configure<DomainSettings>(_configuration.GetSection("Data:DbConnection"));
             services.AddScoped<IBritishProverbsContext, BritishProverbsContext>();
             services.AddMvc();
         }
