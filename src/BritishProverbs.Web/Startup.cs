@@ -25,7 +25,7 @@ namespace BritishProverbs.Web
         {          
             services.Configure<AppSettings>(_configuration.GetSection("AppSettings"));
             services.Configure<DomainSettings>(_configuration.GetSection("Data:DbConnection"));
-            services.AddScoped<IBritishProverbsContext, BritishProverbsContext>();
+            services.AddSingleton<IBritishProverbsContext, BritishProverbsContext>();
             services.AddMvc();
         }
 
