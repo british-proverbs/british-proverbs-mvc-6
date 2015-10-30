@@ -15,6 +15,7 @@ namespace BritishProverbs.Domain
         public BritishProverbsContext(IOptions<DomainSettings> domainOptionsAccessor)
         {
             _connectionString = domainOptionsAccessor.Options.ConnectionString;
+            Initialize();
         }
 
         public async Task<ProverbModel> GetRandomAsync()
@@ -87,6 +88,14 @@ namespace BritishProverbs.Domain
                 Id = int.Parse(reader["Id"].ToString()),
                 Content = reader["Content"] is DBNull ? null : reader["Content"].ToString()
             };
+        }
+
+        private void Initialize()
+        {
+            for (int i = 0; i < 199999999; i++)
+            {
+                Math.Sqrt(i);
+            }
         }
     }
 }
